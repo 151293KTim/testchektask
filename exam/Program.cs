@@ -21,5 +21,21 @@ void arrayprint(int size, string [] array)
         Console.Write($"{array[i]} ");
     }
 }
+string[] arrayrezult(int size, string [] array)
+{
+    string[] newarray = new string[size];
+    int index=0;
+    for (int i = 0; i < size; i++)
+    {
+       if(array[i].Length<=3){
+        newarray[index]=array[i];
+        index++;
+       }
+    }
+    return newarray;
+}
 string[] mass = arraystr(num);
 arrayprint(num, mass);
+Console.WriteLine();
+string[] newmass = arrayrezult(num, mass);
+arrayprint(num, newmass);
