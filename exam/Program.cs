@@ -6,13 +6,20 @@ Console.WriteLine("Введите количество элементов: ");
 int num = int.Parse(Console.ReadLine());
 string[] arraystr(int size)
 {
-    string [] array=new  string [size];
+    string[] array = new string[size];
     for (int i = 0; i < size; i++)
     {
-        Console.WriteLine($"Введите {i+1} элемент: ");
-        array[i]=Console.ReadLine();
+        Console.WriteLine($"Введите {i + 1} элемент: ");
+        array[i] = Convert.ToString(Console.ReadLine());
     }
     return array;
 }
-
-string [] mass=arraystr(num);
+void arrayprint(int size, string [] array)
+{
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+}
+string[] mass = arraystr(num);
+arrayprint(num, mass);
